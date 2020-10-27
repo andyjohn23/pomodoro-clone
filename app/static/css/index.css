@@ -1,0 +1,14 @@
+.navbar-brand{
+    margin-left: 3%;
+}
+.navbar-brand img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.navbar-brand span{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
