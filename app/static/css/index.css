@@ -82,3 +82,28 @@
     margin-top: 3%;
     font-size: 14px;
 }
+.timer-container{
+    background-color:rgba(182, 33, 33, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 66%;
+    border-radius: 8px;
+}
+.timer-box{
+    margin-top: 2%;
+    width: 66%;
+    height: 230px;
+}
+.timer-box .fa-cog{
+    color: white;
+    object-fit: cover;
+    margin-top: 8%;
+    font-size: 30px;
+}
+.timer-box .fa-window-maximize{
+    color: grey;
+    object-fit: cover;
+    margin-top: 8%;
+    font-size: 30px;
+}
