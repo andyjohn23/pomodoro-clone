@@ -14,6 +14,39 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto main-nav">
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link " href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Stats</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Feedback</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"
+                            aria-hidden="true"></i>&nbsp;English
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"
+                            aria-hidden="true"></i>&nbsp;{{current_user.username}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{url_for('auth.register')}}">Account</a>
+                        <a class="dropdown-item" href="{{url_for('auth.logout')}}">Sign out</a>
+                    </div>
+                </li>
+
+                {% else %}
+
                 <li class="nav-item">
                     <a class="nav-link " href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Stats</a>
                 </li>
@@ -39,10 +72,11 @@
                             aria-hidden="true"></i>&nbsp;Sign up / Login
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Sign Up</a>
-                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="{{url_for('auth.register')}}">Sign up</a>
+                        <a class="dropdown-item" href="{{url_for('auth.login')}}">Login</a>
                     </div>
                 </li>
+                {%endif%}
             </ul>
         </div>
     </nav>
