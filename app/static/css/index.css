@@ -21,4 +21,32 @@
 }
 .navbar .main-nav{
     gap: 15px;
+    margin-right: 5%;
+}
+.registration-form{
+    margin-top: 3%;
+}
+.registration-form input{
+    outline: none;
+    background: transparent;
+    border: 1px solid black;
+    width: 88%;
+    margin-left: 5%;
+}
+.registration-form label{
+    margin-left: 5.5%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+}
+.registration-form input[type=submit]{
+    width: 88%;
+    height: 50px;
+    background-color: #AC2929;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    border: none;
+    outline: none;
+    border-radius: 8px;
 }
