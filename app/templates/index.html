@@ -75,7 +75,7 @@
                         <a class="dropdown-item" href="{{url_for('auth.login')}}">Login</a>
                     </div>
                 </li>
-                
+
                 {%endif%}
 
             </ul>
@@ -84,12 +84,18 @@
 
     <div class="container timer-container">
         <div class="timer-box">
-          <div class="row">
-              <div class="col-md-3">
-                <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>&nbsp;
-                <a href=""><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-              </div>
-          </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>&nbsp;
+                    <a href=""><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="col-md-9 timer-button">
+                    <button type="button">START</button>
+                    <button type="button">STOP</button>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
