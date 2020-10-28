@@ -26,7 +26,7 @@ $('#add').on('click', function () {
     display();
 });
 
-//user tsubtracts minutes
+//user subtracts minutes
 $('#subtract').on('click', function () {
     if (startingMinute > 1) {
         startingMinute = startingMinute - 1;
@@ -64,7 +64,7 @@ function secondCount() {
         // If the count down is finished and end text is written
         if (remaining < 0) {
             clearInterval(countDown);
-            document.getElementById("display").innerHTML = "END";
+            document.getElementById("display").innerHTML = 'END';
         }
 
 

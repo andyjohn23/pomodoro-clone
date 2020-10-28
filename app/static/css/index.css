@@ -148,6 +148,14 @@
     background-color: white;
     gap: 8px;
 }
+  
+  h1, h3 {
+    font-family: Lobster;
+  }
+  h1 { font-size: 400% }
+  
+  .btn{color: blueviolet;}
+  .btn:hover{color: orange; text-decoration: none;}
 
 
   
