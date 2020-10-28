@@ -67,15 +67,15 @@ function secondCount() {
             document.getElementById("display").innerHTML = "END";
         }
 
-        
+
     }, 1000);
 
 }
 
-//user to start or resume
+//user starts or resumes
 $('#start').on('click', function () {
 
-    //to start
+    //start
     if (isNaN(pauseTime)) {
         start = $.now();
         length = startingMinute * 60 * 1000;
@@ -83,7 +83,7 @@ $('#start').on('click', function () {
         secondCount();
     }
 
-    //to resume
+    //resume
     else {
         start = $.now();
         end = start + pauseLength;
@@ -92,7 +92,7 @@ $('#start').on('click', function () {
 
 });
 
-//user to pause
+//user pauses
 $('#pause').on('click', function () {
     pauseTime = $.now();
     pauseLength = end - pauseTime;
@@ -100,12 +100,9 @@ $('#pause').on('click', function () {
 
 });
 
-//user to reset
+//user resets
 $('#stop').on('click', function () {
     clearInterval(countDown);
-    slice = $('#timer').css({
-        'background-image': 'linear-gradient(-90deg, #ffaed2 50%, transparent 50%)'
-    });
     startingMinute = 25;
     display();
     pauseTime = NaN;
