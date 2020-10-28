@@ -12,8 +12,8 @@ var pauseLength;
 
 //show page content when loaded
 $(document).ready(function () {
-    startingMinute = 25;
-    $('#display').html('25:00');
+    startingMinute = 59;
+    $('#display').html('59:00');
 });
 
 function display() {
@@ -63,7 +63,7 @@ function secondCount() {
 
         // If the count down is finished and end text is written
         if (remaining < 0) {
-            clearInterval(x);
+            clearInterval(countDown);
             document.getElementById("display").innerHTML = "END";
         }
 
@@ -103,7 +103,7 @@ $('#pause').on('click', function () {
 //user resets
 $('#stop').on('click', function () {
     clearInterval(countDown);
-    startingMinute = 25;
+    startingMinute = 59;
     display();
     pauseTime = NaN;
 });
