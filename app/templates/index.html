@@ -2,7 +2,7 @@
 <!-- Content block -->
 {% block content %}
 <div class="container-fluid" style="padding: 0; margin: 0;">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="/">
             <img src="static/images/pomo-lg.png" alt="logo">
             <span>Pomodoro-clone</span>
@@ -91,12 +91,14 @@
                 </div>
 
                 <div class="time">
-                    <span>25:00</span>
+                    <span id="session-time">30:00</span><br>
+                    <button type="button" id="subtract"><i class="fa fa-minus" aria-hidden="true"></i></button>&nbsp;
+                    <button type="button" id="add"><i class="fa fa-plus" aria-hidden="true"></i></button>
                 </div>
 
                 <div class="col-md-9 timer-button">
-                    <button type="button">START</button>
-                    <button type="button">STOP</button>
+                    <button type="button" id="start">START</button>
+                    <button type="button" id="stop">STOP</button>
                 </div>
 
             </div>
