@@ -65,7 +65,7 @@ function secondCount() {
         if (remaining < 0) {
             clearInterval(countDown);
             document.getElementById("display").innerHTML = 'END';
-            alert("ended")
+            swal("TIME TO TAKE A BREAK!!!")
         }
 
 
