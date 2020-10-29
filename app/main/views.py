@@ -6,7 +6,7 @@ from ..models import User,Task
 
 @main.route('/')
 def index():
-    Task = Task.query.all()
+    
     return render_template('index.html', task = Task)
 
 @main.route('/create_new', methods = ['POST','GET'])
@@ -17,8 +17,8 @@ def new_task():
         title = form.title.data
         post = form.post.data
         user_id = current_user
-        new_pitch_object = Task(post=post,user_id=current_user._get_current_object().id,title=title)
-        new_pitch_object.save_p()
+        new_task_object = Task(post=post,user_id=current_user._get_current_object().id,title=title)
+        new_task_object.save_p()
         return redirect(url_for('main.index'))
         
     return render_template('create_task.html', form = form)		
