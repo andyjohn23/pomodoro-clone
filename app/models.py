@@ -22,6 +22,7 @@ class User(UserMixin, db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String())
+    task = db.relationship('task', backref='user', lazy='dynamic')
 
     @property
     def password(self):
@@ -46,3 +47,18 @@ class User(UserMixin, db.Model):
     
     def __repr__(self):
         return f'User {self.username}'
+
+class Task(db.Model):
+    __tablename__ = 'task'
+    id = db.Column(db.Integer, primary_key = True)
+    title = db.Column(db.String(255),nullable = False)
+    post = db.Column(db.Text(), nullable = False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    
+    def save_p(self):
+        db.session.add(self)
+        db.session.commit()
+
+        
+    def __repr__(self):
+        return f'Task {self.post}'        
