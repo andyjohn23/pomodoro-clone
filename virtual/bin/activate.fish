@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/andrew-john/Documents/pomodoro/pomodoro-clone/virtual"
+set -gx VIRTUAL_ENV "/home/moringa/Documents/moringa-school-projects/Python/pomodoro-clone/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
