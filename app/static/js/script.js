@@ -65,6 +65,7 @@ function secondCount() {
         if (remaining < 0) {
             clearInterval(countDown);
             document.getElementById("display").innerHTML = 'END';
+            document.getElementById('alarm').play();
             swal("TIME TO TAKE A BREAK!!!")
         }
 
